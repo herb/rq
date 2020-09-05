@@ -47,7 +47,7 @@ class RQScheduler(object):
         self._scheduled_job_registries = []
         self.lock_acquisition_time = None
         self._connection_kwargs = connection.connection_pool.connection_kwargs
-        self._connection = None
+        self._connection = connection
         self.interval = interval
         self._stop_requested = False
         self._status = self.Status.STOPPED
