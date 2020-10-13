@@ -50,7 +50,7 @@ class RQScheduler(object):
         connection_class = connection.connection_pool.connection_class
         if issubclass(connection_class, SSLConnection):
             self._connection_kwargs['ssl'] = True
-        self._connection = None
+        self._connection = connection
         self.interval = interval
         self._stop_requested = False
         self._status = self.Status.STOPPED
